@@ -1,0 +1,26 @@
+.comment {
+	margin-bottom: 5px;
+	background-color: #F7F7F7;
+	padding: 3px;
+}
+
+.user {
+	font-size: 1.4em;
+	font-weight: bold;	
+}
+
+.content {
+	font-size: 1.1em;	
+	color: #351CDB;
+}
+
+.date {
+	font-size: 0.8em;	
+	color: #ff0055;
+	font-style: italic;
+}
+
+.vote {
+	font-size: 0.7em;	
+	color: #ff0055;
+}

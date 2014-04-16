@@ -1,0 +1,37 @@
+<h2>Bienvenue {{ user.login }}</h2>
+
+<div ng-repeat="comment in model.comments" class="comment" >
+	
+	<span class="user">
+		{{ comment.user.login }}
+	</span>
+	<br/>
+
+	<span class="content">
+		{{ comment.content }}
+	</span>
+	<br/>
+
+	<span class="date">
+		{{ comment.date | date:'le dd/MM/yyyy &agrave; HH:mm:ss' }}
+	</span>
+	
+	<span class="vote">
+	  [{{ comment.votes }}]
+	</span>
+	
+	<button ng-click="addVotes(comment, -1)" class="btn btn-success btn-xs">-1</button>
+	<button ng-click="addVotes(comment, 1)" class="btn btn-success btn-xs">+1</button>
+	<button ng-click="remove(comment, $index)" class="btn btn-danger btn-xs">Supprimer</button>
+	
+</div>
+
+<form ng-submit="add()" class="form-inline">
+
+	<div class="form-group">
+		<input type="text" ng-model="model.newComment.content" placeholder="Content" class="form-control" >
+	</div>
+	
+	<input type="submit" value="Envoyer" class="btn btn-primary" />
+
+</form>
